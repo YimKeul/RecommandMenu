@@ -10,7 +10,13 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-   
+            Spacer()
+            Text("오늘은")
+            Spacer()
+            Roulette()
+            Spacer()
+
+
         }
         .padding()
     }

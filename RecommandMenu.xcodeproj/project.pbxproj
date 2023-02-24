@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8654E3E529A8CA5000EA8A48 /* Roulette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8654E3E429A8CA5000EA8A48 /* Roulette.swift */; };
 		86FD088429A88A32008FBEAB /* RecommandMenuApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FD088329A88A32008FBEAB /* RecommandMenuApp.swift */; };
 		86FD088629A88A32008FBEAB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FD088529A88A32008FBEAB /* ContentView.swift */; };
 		86FD088829A88A33008FBEAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86FD088729A88A33008FBEAB /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8654E3E429A8CA5000EA8A48 /* Roulette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Roulette.swift; sourceTree = "<group>"; };
 		86FD088029A88A32008FBEAB /* RecommandMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecommandMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86FD088329A88A32008FBEAB /* RecommandMenuApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommandMenuApp.swift; sourceTree = "<group>"; };
 		86FD088529A88A32008FBEAB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -52,6 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				86FD088329A88A32008FBEAB /* RecommandMenuApp.swift */,
+				8654E3E429A8CA5000EA8A48 /* Roulette.swift */,
 				86FD088529A88A32008FBEAB /* ContentView.swift */,
 				86FD088729A88A33008FBEAB /* Assets.xcassets */,
 				86FD088929A88A33008FBEAB /* Preview Content */,
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8654E3E529A8CA5000EA8A48 /* Roulette.swift in Sources */,
 				86FD088629A88A32008FBEAB /* ContentView.swift in Sources */,
 				86FD088429A88A32008FBEAB /* RecommandMenuApp.swift in Sources */,
 			);
