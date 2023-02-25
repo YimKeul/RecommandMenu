@@ -11,9 +11,11 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Spacer()
-            Text("오늘은")
-            Spacer()
-            Roulette()
+            Text("오늘은").font(.largeTitle)
+            HStack{
+                Roulette()
+            }.frame(maxWidth: .infinity , maxHeight: 400)
+                .background(Color("babypink"))
             Spacer()
 
 
