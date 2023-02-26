@@ -21,7 +21,6 @@ struct Roulette: View {
     
     
     var rouletteData = RouletteData()
-    @State var randomInt : Int = Int.random(in: 0..<14)
 
     
     var body: some View {
@@ -53,6 +52,7 @@ struct Roulette: View {
                     
                     Text("🔻")
                         .offset(y:-325)
+                    Spacer()
                     
                     if doRoulette == false{
                         Button {
@@ -70,8 +70,15 @@ struct Roulette: View {
                         Text("두구두구두구")
                     }
                 }
-            }else{
-                Text("다 돌았다아")
+            }
+            else{
+                var randomInt = Int.random(in: 0...15)
+                Image(rouletteData.rouletteText[randomInt])
+                    .resizable()
+                    .frame(width: 300, height: 300, alignment: .center)
+                Text(rouletteData.rouletteText[randomInt])
+                    .font(.largeTitle)
+                Spacer()
                 Button {
                     isShownRoulette = true
                     doRoulette = false
@@ -82,8 +89,6 @@ struct Roulette: View {
                         .font(.largeTitle)
                 }
             }
-            
-            
         }
     }
 }

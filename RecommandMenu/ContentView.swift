@@ -10,15 +10,11 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Spacer()
-            Text("오늘은").font(.largeTitle)
+            Text("지금은").font(.largeTitle)
             HStack{
                 Roulette()
-            }.frame(maxWidth: .infinity , maxHeight: 400)
+            }.frame(maxWidth: .infinity , maxHeight: 500)
                 
-            Spacer()
-
-
         }
         .padding()
     }
