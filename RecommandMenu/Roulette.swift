@@ -6,8 +6,6 @@
 //
 
 import SwiftUI
-import SimpleRoulette
-
 
 struct Roulette: View {
     
@@ -15,57 +13,51 @@ struct Roulette: View {
     // 룰렛이 돌아가고 있는 지 판별 (true : 동작중 , false : 멈춤)
     @State var isShownRoulette: Bool  = true
     // 룰렛이 보여지고 있는지 판별 (true : show, false : hidden)
-    @State var degreeRoulettee : Double = 0
+    @State var degreeRoulette : Double = 0
     // 룰렛이 원형으로 돌기 위한 각도 값
     @State var durationTime : Double = 0
     // 롤렛이 돌는 시간 값
     
+    
+    
+    var rouletteData = RouletteData()
+    @State var randomInt : Int = Int.random(in: 0..<14)
 
+    
     var body: some View {
         VStack{
+   
             if isShownRoulette{
                 VStack{
-                    Text("⬇️")
-          
-                    
+                    let rouletteDataLength = Double(rouletteData.rouletteText.count)
+                    let rouletteDegreeFirstValue = round(Double(360/rouletteDataLength)*10)/10
+                    let rouletteDegreeSecondValue = round(Double(360/(rouletteDataLength*2))*10)/10
+
                     ZStack{
-                        RouletteFillColor(slices: [
-                            (1, .red),
-                            (1, .orange),
-                            (1, .yellow),
-                            (1, .green),
-                            (1, .blue),
-                            (1, .indigo),
-                            (1, .purple),
-                            (1, .red),
-                            (1, .orange),
-                            (1, .yellow),
-                            (1, .green),
-                            (1, .blue),
-                            (1, .indigo),
-                            (1, .purple),
-                            (1, .black),
+                        Circle()
+                            .foregroundColor(Color("BorderRoulette"))
                             
-                        ])
-                        ForEach(0..<15) { number in
-                            Text("\(number)")
-                                .font(.system(size: 24, weight: .bold, design: .rounded))
-                                .offset(x: 0, y: -130)
-                                .rotationEffect(.degrees(Double(number)*24 + 12))
+                        RouletteFillColor()
+                        ForEach(0..<Int(rouletteDataLength), id:\.self) { data  in
+                            Image(rouletteData.rouletteText[data])
+                                .resizable()
+                                .frame(width: 30 ,height: 30)
+                                .offset(x: 0, y: -120)
+                                .rotationEffect(.degrees(Double(data)*rouletteDegreeFirstValue+rouletteDegreeSecondValue))
                                 .foregroundColor(.white)
-                    
                         }
-           
                     }
                     .frame(width: 300, height: 310)
-                    .rotationEffect(.degrees(degreeRoulettee))
-                    .animation(.easeIn(duration: durationTime), value: doRoulette )
+                    .rotationEffect(.degrees(degreeRoulette))
+                    .animation(.easeOut(duration: durationTime), value: doRoulette )
                     
+                    Text("🔻")
+                        .offset(y:-325)
                     
                     if doRoulette == false{
                         Button {
                             doRoulette = true
-                            degreeRoulettee = 100000
+                            degreeRoulette = 200*10
                             durationTime = 5
                             DispatchQueue.main.asyncAfter(deadline: .now() + 3.8) {
                                 isShownRoulette = false
@@ -78,14 +70,12 @@ struct Roulette: View {
                         Text("두구두구두구")
                     }
                 }
-                
-                
             }else{
                 Text("다 돌았다아")
                 Button {
                     isShownRoulette = true
                     doRoulette = false
-                    degreeRoulettee = 0
+                    degreeRoulette = 0
                     durationTime = 0
                 } label: {
                     Text("⬅️ 다시 돌리기")

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8654E3E529A8CA5000EA8A48 /* Roulette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8654E3E429A8CA5000EA8A48 /* Roulette.swift */; };
 		8654E3EA29A9FA0300EA8A48 /* RouletteFillColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8654E3E929A9FA0300EA8A48 /* RouletteFillColor.swift */; };
+		8654E3EE29AB8FCB00EA8A48 /* RouletteData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8654E3ED29AB8FCB00EA8A48 /* RouletteData.swift */; };
 		86FD088429A88A32008FBEAB /* RecommandMenuApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FD088329A88A32008FBEAB /* RecommandMenuApp.swift */; };
 		86FD088629A88A32008FBEAB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FD088529A88A32008FBEAB /* ContentView.swift */; };
 		86FD088829A88A33008FBEAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86FD088729A88A33008FBEAB /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* Begin PBXFileReference section */
 		8654E3E429A8CA5000EA8A48 /* Roulette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Roulette.swift; sourceTree = "<group>"; };
 		8654E3E929A9FA0300EA8A48 /* RouletteFillColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteFillColor.swift; sourceTree = "<group>"; };
+		8654E3ED29AB8FCB00EA8A48 /* RouletteData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteData.swift; sourceTree = "<group>"; };
 		86FD088029A88A32008FBEAB /* RecommandMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecommandMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86FD088329A88A32008FBEAB /* RecommandMenuApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommandMenuApp.swift; sourceTree = "<group>"; };
 		86FD088529A88A32008FBEAB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				8654E3E929A9FA0300EA8A48 /* RouletteFillColor.swift */,
 				86FD088729A88A33008FBEAB /* Assets.xcassets */,
 				86FD088929A88A33008FBEAB /* Preview Content */,
+				8654E3ED29AB8FCB00EA8A48 /* RouletteData.swift */,
 			);
 			path = RecommandMenu;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8654E3EE29AB8FCB00EA8A48 /* RouletteData.swift in Sources */,
 				8654E3E529A8CA5000EA8A48 /* Roulette.swift in Sources */,
 				86FD088629A88A32008FBEAB /* ContentView.swift in Sources */,
 				86FD088429A88A32008FBEAB /* RecommandMenuApp.swift in Sources */,

@@ -15,7 +15,7 @@ struct ContentView: View {
             HStack{
                 Roulette()
             }.frame(maxWidth: .infinity , maxHeight: 400)
-                .background(Color("babypink"))
+                
             Spacer()
 
 
