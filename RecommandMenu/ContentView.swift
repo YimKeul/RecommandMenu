@@ -11,9 +11,8 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Text("지금은").font(.largeTitle)
-            HStack{
-                Roulette()
-            }.frame(maxWidth: .infinity , maxHeight: 500)
+            Roulette()
+            .frame(maxWidth: .infinity , maxHeight: 500)
                 
         }
         .padding()

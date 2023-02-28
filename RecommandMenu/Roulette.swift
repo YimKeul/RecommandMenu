@@ -67,8 +67,6 @@ struct Roulette: View {
                             Text("🕹️ 룰렛 돌리기")
                                 .font(.largeTitle)
                         }
-                    } else {
-                        Text("두구두구두구")
                     }
                 }
             }
