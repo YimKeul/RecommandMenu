@@ -31,11 +31,11 @@ struct Roulette: View {
                     let rouletteDataLength = Double(rouletteData.rouletteText.count)
                     let rouletteDegreeFirstValue = round(Double(360/rouletteDataLength)*10)/10
                     let rouletteDegreeSecondValue = round(Double(360/(rouletteDataLength*2))*10)/10
-
+                    
                     ZStack{
                         Circle()
                             .foregroundColor(Color("BorderRoulette"))
-                            
+                        
                         RouletteFillColor()
                         ForEach(0..<Int(rouletteDataLength), id:\.self) { data  in
                             Image(rouletteData.rouletteText[data])
@@ -51,7 +51,8 @@ struct Roulette: View {
                     .animation(.easeOut(duration: durationTime), value: doRoulette )
                     
                     Text("🔻")
-                        .offset(y:-325)
+                        .font(.title)
+                        .offset(y:-330)
                     Spacer()
                     
                     if doRoulette == false{
@@ -72,7 +73,7 @@ struct Roulette: View {
                 }
             }
             else{
-                var randomInt = Int.random(in: 0...15)
+                let randomInt = Int.random(in: 0...15)
                 Image(rouletteData.rouletteText[randomInt])
                     .resizable()
                     .frame(width: 300, height: 300, alignment: .center)
