@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
 
-    
+    @EnvironmentObject var dataManager : DataManager
     var body: some View {
         VStack {
             Text("지금은").font(.largeTitle)
@@ -23,6 +23,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(DataManager())
     }
 }

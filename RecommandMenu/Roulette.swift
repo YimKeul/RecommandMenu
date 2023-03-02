@@ -20,8 +20,6 @@ struct Roulette: View {
     @State var durationTime : Double = 0
     // 롤렛이 돌는 시간 값
     
-        
-
     
     var rouletteData = RouletteData()
     
@@ -83,12 +81,18 @@ struct Roulette: View {
 //                Text(rouletteData.rouletteText[randomInt])
 //                    .font(.largeTitle)
           
+//                let randomInt : Int = Int.random(in 0... FirebaseDataLength)
 
-
-                List(dataManager.menus, id : \.id) {
-                    menu in
-                    Text(menu.name)
-                }
+//                List(dataManager.menus, id : \.id) {
+//                    menu in
+//                    Text(menu.name)
+//                }
+//
+                Spacer()
+                let randomInt : Int = Int.random(in: 0...dataManager.menus.count-1)
+                
+                Text(dataManager.menus[randomInt].name + " 땡겨요").font(.largeTitle)
+        
                 Spacer()
                 Button {
                     isShownRoulette = true
