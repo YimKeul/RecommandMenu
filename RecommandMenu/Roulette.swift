@@ -9,6 +9,8 @@ import SwiftUI
 
 struct Roulette: View {
     
+    @EnvironmentObject var dataManager : DataManager
+    
     @State var doRoulette : Bool = false
     // 룰렛이 돌아가고 있는 지 판별 (true : 동작중 , false : 멈춤)
     @State var isShownRoulette: Bool  = true
@@ -18,9 +20,11 @@ struct Roulette: View {
     @State var durationTime : Double = 0
     // 롤렛이 돌는 시간 값
     
-    
+        
+
     
     var rouletteData = RouletteData()
+    
 
     
     var body: some View {
@@ -71,12 +75,20 @@ struct Roulette: View {
                 }
             }
             else{
-                let randomInt = Int.random(in: 0...15)
-                Image(rouletteData.rouletteText[randomInt])
-                    .resizable()
-                    .frame(width: 300, height: 300, alignment: .center)
-                Text(rouletteData.rouletteText[randomInt])
-                    .font(.largeTitle)
+//                let randomInt:Int = Int.random(in: 0...13)
+//
+//                Image(rouletteData.rouletteText[randomInt])
+//                    .resizable()
+//                    .frame(width: 300, height: 300, alignment: .center)
+//                Text(rouletteData.rouletteText[randomInt])
+//                    .font(.largeTitle)
+          
+
+
+                List(dataManager.menus, id : \.id) {
+                    menu in
+                    Text(menu.name)
+                }
                 Spacer()
                 Button {
                     isShownRoulette = true
@@ -94,6 +106,6 @@ struct Roulette: View {
 
 struct Roulette_Previews: PreviewProvider {
     static var previews: some View {
-        Roulette()
+        Roulette().environmentObject(DataManager())
     }
 }

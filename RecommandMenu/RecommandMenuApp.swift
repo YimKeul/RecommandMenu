@@ -6,12 +6,20 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct RecommandMenuApp: App {
+    @StateObject var dataManager = DataManager()
+    init() {
+        FirebaseApp.configure()
+    }
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView{
+                ContentView().environmentObject(dataManager)
+            }
         }
     }
 }
